@@ -140,7 +140,11 @@ void setup()
     digitalWrite(3,HIGH);  
   
     pinMode(ARDUINO_LED,OUTPUT);    // Arduino LED
+    pinMode(STATUS1_LED,OUTPUT); 
+    pinMode(STATUS2_LED,OUTPUT); 
     digitalWrite(ARDUINO_LED, HIGH);
+    digitalWrite(STATUS1_LED, LOW);
+    digitalWrite(STATUS2_LED, LOW);
 
 #if FATSHARK_HT_MODULE
     pinMode(BUZZER,OUTPUT);         // Buzzer
@@ -171,9 +175,13 @@ void setup()
  
     GetSettings();                // Get settings saved in EEPROM
     InitSensors();                // Initialize I2C sensors    
+	digitalWrite(STATUS2_LED, HIGH);
+	delay(500);
+	RemapAxes();
     ResetCenter();
-    RemapAxes();
     InitTimerInterrupt();         // Start timer interrupt (for sensors)  
+    digitalWrite(STATUS1_LED, HIGH);	
+;
 }
 
 //--------------------------------------------------------------------------------------
