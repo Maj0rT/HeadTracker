@@ -69,6 +69,8 @@
 
 // Arduino LED
 #define ARDUINO_LED 13
+#define STATUS1_LED 3
+#define STATUS2_LED 4
 
 #define SENSOR_NAME "BNO055"
 
