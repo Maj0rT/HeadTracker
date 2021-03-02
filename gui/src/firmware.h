@@ -11,7 +11,8 @@
 #include <QPlainTextEdit>
 
 // !!!! Move me to a adjustable settings file !!!!! **********************
-const QString baseurl = "https://raw.githubusercontent.com/dlktdr/HeadTracker/master/firmware/bin/";
+//const QString baseurl = "https://raw.githubusercontent.com/dlktdr/HeadTracker/master/firmware/bin/";
+const QString baseurl = "https://raw.githubusercontent.com/Ziege-One/HeadTracker/master/firmware/bin/";
 
 const QString localfilename = "online.hex";
 
