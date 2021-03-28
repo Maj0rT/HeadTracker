@@ -143,6 +143,16 @@ void setup()
     pinMode(STATUS1_LED,OUTPUT); 
     pinMode(STATUS2_LED,OUTPUT); 
     digitalWrite(ARDUINO_LED, HIGH);
+
+    digitalWrite(STATUS1_LED, HIGH);
+    digitalWrite(STATUS2_LED, HIGH);
+    delay(500);
+    digitalWrite(STATUS1_LED, LOW);
+    digitalWrite(STATUS2_LED, LOW);
+    delay(500);
+    digitalWrite(STATUS1_LED, HIGH);
+    digitalWrite(STATUS2_LED, HIGH);
+    delay(500);
     digitalWrite(STATUS1_LED, LOW);
     digitalWrite(STATUS2_LED, LOW);
 
