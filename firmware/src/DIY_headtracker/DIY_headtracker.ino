@@ -52,8 +52,8 @@ char string_started = 0;        // Only saves data if string starts with right b
 unsigned char channel_mapping[13];
 
 char outputMag = 0;             // Stream magnetometer data to host
-char outputAcc = 0;             // Stream acelerometer data to host
-char outputMagAcc = 0;          // Stream mag and accell data (for calibration on PC)
+char outputAcc = 0;             // Stream accelerometer data to host
+char outputMagAcc = 0;          // Stream mag and accel data (for calibration on PC)
 char outputTrack = 0;	        // Stream angle data to host
 
 // Keep track of button press
@@ -413,7 +413,7 @@ void loop()
                 string_started = 0;
             }
 
-            // Hardmware version requested
+            // Hardware version requested
             else if (IsCommand("HARD")) {
                 Serial.print("$HARD");
                 Serial.println(SENSOR_NAME);
